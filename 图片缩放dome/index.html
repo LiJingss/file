@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/uber-zoom.css">
+    <title>Uber Zoom - jQuery滚动鼠标图片平滑缩放插件</title>
+</head>
+<body>
+	<div class="container">
+		<img src="img/1.jpg" id="demo-1">
+	</div>
+	<div class="container">
+
+		<div class="column-2 column-last" style="margin-right:20px">
+			<img src="img/3.jpg" id="demo-2">
+		</div>
+
+		<div class="column-2 column-last">
+			<img src="img/4.jpg" id="demo-3">
+		</div>
+
+		<h2>Fullscreen</h2>
+
+		<img src="img/7.jpg" id="demo-6">
+
+	</div>
+
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <!-- <script src="js/plugins.js"></script> -->
+    <script src="js/demo.js"></script>
+    <script>
+		(function ( $, window, document, undefined ) {
+		    $(document).ready(function() {
+		    	$("#demo-1").uberZoom({
+		    		width : 960,
+		    		height : 400,
+		    		navigator : true,
+		    		navigatorImagePreview : true
+		    	});
+		    	$("#demo-2").uberZoom({
+		    		width : 300,
+		    		height : 300
+		    	});
+		    	$("#demo-3").uberZoom({
+		    		width : 470,
+		    		height : 300,
+		    		navigator : true,
+		    		navigatorImagePreview : true
+		    	});
+		    	$("#demo-6").uberZoom({
+		    		width : 960,
+		    		height : 400,
+		    		fullscreen : true
+		    	});
+		    	$("#demo-7").uberZoom({
+		    		height : 460
+		    	});
+		    });
+		})( jQuery, window, document );
+    </script>
+</body>
+</html>

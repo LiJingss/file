@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script src="jquery-1.11.1.min.js"></script>
+  <script src="jquery.jSelectDate.js"></script>
+  
+</head>
+<body>
+  <input type="text" id="getDate" class="date" value="2014-8-6" />
+</body>
+<script>
+//日期应用方法
+$("input.date").jSelectDate({
+  css:"date",
+  yearBeign: 1995,
+  disabled : false,
+  showLabel : false
+});
+</script>
+</html>

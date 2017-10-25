@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<!-- <script src="font_size.js"></script> -->
+	<script>
+		/*onresize = function(){
+			document.documentElement.style.fontSize = innerWidth/16+'px';
+		}
+		document.documentElement.style.fontSize = innerWidth/16+'px';*/
+
+		(function (doc, win) {
+		    var docEl = doc.documentElement,
+		        resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+		        recalc = function () {
+		            var clientWidth = docEl.clientWidth;
+		            if (!clientWidth) return;
+		            if(clientWidth>=1920){
+		                docEl.style.fontSize = '100px';
+		            }else{
+		                docEl.style.fontSize  = 100 * (clientWidth / 1920) + 'px';
+		            }
+		        };
+
+		    if (!doc.addEventListener) return;
+		    win.addEventListener(resizeEvt, recalc, false);
+		    doc.addEventListener('DOMContentLoaded', recalc, false);
+		})(document, window);
+	</script>
+	<style>
+		button {
+			display: block;
+			margin:0 auto;
+			background-color: #47cce2;
+			text-align: center;
+			border:0;
+			border-radius: 3px;
+			padding: 0;
+			font-size: 0.16rem;
+			width: 1.8rem;
+			height: 0.4rem;
+			line-height: 0.4rem; 
+			/* width: 1.5rem;
+			height: 0.333rem;
+			font-size: 0.13333rem;
+			line-height: 0.33333rem; */
+		}
+	</style>
+</head>
+<body>
+	<button>下一步</button>
+</body>
+</html>
