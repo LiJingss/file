@@ -1,1 +1,5 @@
-https://github.com/rascalHao/kiko
+源码地址  https://github.com/rascalHao/kiko
+
+预览地址  http://haogewudi.me/kiko/index.html#/
+
+教学技术  https://segmentfault.com/a/1190000010559711
